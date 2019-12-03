@@ -1,6 +1,6 @@
 # 如何在不刷新页面的情况下改变URL
 ## 主要有两种方式
-#####第一种
+##### 第一种
 * 改 window.location.hash  优点是：没有任何的BUG 
 小栗子 ：
 ```
@@ -40,8 +40,10 @@
     }
   }
 ```
-#####第二种
-用 [window.history.pushState()](https://developer.mozilla.org/zh-CN/docs/Web/API/History_API#%E6%B7%BB%E5%8A%A0%E5%92%8C%E4%BF%AE%E6%94%B9%E5%8E%86%E5%8F%B2%E8%AE%B0%E5%BD%95%E4%B8%AD%E7%9A%84%E6%9D%A1%E7%9B%AE "null")
+##### 第二种
+
+* 用 [window.history.pushState()](https://developer.mozilla.org/zh-CN/docs/Web/API/History_API#%E6%B7%BB%E5%8A%A0%E5%92%8C%E4%BF%AE%E6%94%B9%E5%8E%86%E5%8F%B2%E8%AE%B0%E5%BD%95%E4%B8%AD%E7%9A%84%E6%9D%A1%E7%9B%AE "null")
+
 优点： 更优雅 。缺点：刷新就会 404  解决方式 ：让后端支持模糊匹配的路由 
 小栗子 ：
 ```
