@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>url跳转-demo</title>
+</head>
+<body>
+<button id="x">x</button>
+<button id="y">y</button>
+<div id="动态区域"></div>
+<script>
+  x.onclick = function () {
+    // 动态区域.innerText = 'xxxxxxxxxxx'
+    window.location.hash = 'x'
+  }
+  y.onclick = function () {
+    window.location.hash = 'y'
+  }
+  // x.onclick = function () {
+  //   // alert('1')
+  //   window.location.hash = "wangyx"
+  // }
+  //点击当前按钮 动态展示当前hash及内容
+  window.onhashchange = function () {
+    var hash = window.location.hash
+    展示内容(hash)
+  }
+  var hash = window.location.hash
+  if (hash === '') {
+    window.location.hash = 'x'
+  } else {
+    展示内容(hash)
+  }
+
+  function 展示内容(hash) {
+    if (hash === '#x') {
+      动态区域.innerText = 'xxxxxxxxxxx'
+    } else if (hash === '#y') {
+      动态区域.innerText = 'yyyyyyyyyyyy'
+    }
+  }
+</script>
+</body>
+</html>

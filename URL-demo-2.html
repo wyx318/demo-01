@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>window.history.pushState</title>
+</head>
+<body>
+<button id="x">x</button>
+<button id="y">y</button>
+<div id="动态区域"></div>
+<script>
+  x.onclick = function () {
+    window.history.pushState('', 'x页面', '/URL-demo-2.html/x')
+  }
+  y.onclick = function () {
+    window.history.pushState('', 'y页面', '/URL-demo-2.html/y')
+  }
+</script>
+</body>
+</html>
